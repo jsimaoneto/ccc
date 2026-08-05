@@ -1256,6 +1256,18 @@ img.logo__mark--footer {
 .gallery__ph small { font-size: .72rem; background: rgba(255,255,255,.08); padding: .15rem .5rem; border-radius: 6px; color: var(--on-navy); }
 .gallery__item.is-empty img { display: none; }
 .gallery__item.is-empty .gallery__ph { display: flex; }
+.gallery__cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 1.4rem .9rem .7rem;
+  font-family: var(--font-sans); font-size: .74rem; font-weight: 600;
+  letter-spacing: .04em; color: #fff;
+  background: linear-gradient(to top, rgba(11,31,58,.72), transparent);
+  opacity: 0; transform: translateY(6px); transition: opacity .35s ease, transform .35s ease;
+  pointer-events: none;
+}
+.gallery__item:hover .gallery__cap,
+.gallery__item:focus-within .gallery__cap { opacity: 1; transform: translateY(0); }
+.gallery__item.is-empty .gallery__cap { display: none; }
 
 /* mapa em seção de fundo claro */
 .map-card--light {
